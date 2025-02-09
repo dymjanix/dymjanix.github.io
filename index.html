@@ -1,52 +1,106 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>List of my projects - DymjaniX</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Код с душой | Контакты</title>
     <style>
+        @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
+        
         body {
             font-family: Arial, sans-serif;
-            background-color: #1e1e2e;
-            color: #ffffff;
             text-align: center;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: #333;
+            margin: 0;
             padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            max-width: 400px;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            opacity: 0;
+            transform: translateY(-20px);
+            animation: fadeIn 1s forwards;
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        img {
+            width: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
         }
         h1 {
-            margin-bottom: 20px;
+            font-size: 24px;
         }
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-        li {
-            margin: 10px 0;
-        }
-        a {
-            display: inline-block;
-            padding: 10px 20px;
-            text-decoration: none;
+        p {
+            font-size: 16px;
             color: #fff;
-            background: #4c4c6d;
-            border-radius: 8px;
-            transition: 0.3s;
         }
-        a:hover {
-            background: #6a5acd;
+        .links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            background: rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            transition: 0.3s;
+            font-size: 18px;
+        }
+        .links a i {
+            margin-right: 10px;
+        }
+        .links a:hover {
+            background: rgba(255, 255, 255, 0.5);
+        }
+        .email {
+            cursor: pointer;
+            background: rgba(255, 255, 255, 0.3);
+            padding: 10px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .email:hover {
+            background: rgba(255, 255, 255, 0.5);
         }
     </style>
 </head>
 <body>
-
-    <h1>Мои проекты</h1>
-    <ul>
-        <li><a href="https://example.com/project1" target="_blank">Проект 1</a></li>
-        <li><a href="https://example.com/project2" target="_blank">Проект 2</a></li>
-        <li><a href="https://example.com/project3" target="_blank">Проект 3</a></li>
-    </ul>
-
+    <div class="container">
+        <img src="avatar.png" alt="Аватар">
+        <h1>Код с душой</h1>
+        <p>Программист | Делюсь знаниями</p>
+        <div class="links">
+		    <a href="https://www.facebook.com/dymjanix" target="_blank"><i class="fab fa-facebook"></i>Facebook</a>
+            <a href="https://t.me/foxovich" target="_blank"><i class="fab fa-telegram"></i>Telegram</a>
+			<a href="https://discordapp.com/users/dymjanix" target="_blank"><i class="fab fa-discord"></i>Discord</a>
+            <a href="https://github.com/dymjanix" target="_blank"><i class="fab fa-github"></i>GitHub</a>
+			<div class="email" onclick="copyEmail()"><i class="fas fa-envelope"></i> Скопировать мою почту</div>
+        </div>
+    </div>
+    
+    <script>
+        function copyEmail() {
+            const email = "dymjanix@gmail.com";
+            navigator.clipboard.writeText(email).then(() => {
+                alert("Email скопирован: " + email);
+            });
+        }
+    </script>
 </body>
 </html>
-
