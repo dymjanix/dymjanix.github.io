@@ -1,120 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DymjaniX</title>
-    <style>
-        body {
-            margin: 0;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: #0d1117;
-            background: url('image/asfalt-dark.webp') no-repeat center center fixed;
-            background-size: cover;
-			image-rendering: pixelated;
-            background-attachment: fixed; /* Фиксирует фон при прокрутке */
-            color: white;
-            font-family: Arial, sans-serif;
-        }
-        .card {
-            background: #161b22;
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            width: 300px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-        .avatar {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            margin-bottom: 10px;
-        }
-        .name {
-            font-size: 20px;
-            font-weight: bold;
-        }
-        .description {
-            font-size: 14px;
-            color: #8b949e;
-        }
-        .tabs {
-            display: flex;
-            justify-content: center;
-            margin-top: 10px;
-        }
-        .tab {
-            padding: 5px 10px;
-            cursor: pointer;
-            font-size: 14px;
-            border-bottom: 2px solid transparent;
-        }
-        .tab.active {
-            border-bottom: 2px solid white;
-        }
-        .socials, .various {
-            margin-top: 15px;
-            display: none;
-        }
-        .socials.active, .various.active {
-            display: block;
-        }
-        .socials a, .various a {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-            color: white;
-            margin: 5px 0;
-            padding: 8px;
-            border-radius: 5px;
-            transition: background 0.3s;
-        }
-        .socials a:hover, .various a:hover {
-            background: rgba(255, 255, 255, 0.1);
-        }
-        .socials img, .various img {
-            width: 20px;
-            height: 20px;
-            margin-right: 10px;
-        }
-    </style>
-    <script>
-        function showSection(section) {
-            document.querySelector('.socials').classList.remove('active');
-            document.querySelector('.various').classList.remove('active');
-            document.querySelector(`.${section}`).classList.add('active');
-            document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
-            document.querySelector(`.${section}-tab`).classList.add('active');
-        }
-    </script>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>List of my projects - DymjaniX</title>
 </head>
 <body>
-    <div class="card">
-        <img src="avatar.jpg" alt="Аватар" class="avatar">
-        <div class="name">Твоё Имя</div>
-        <div class="description">Твой статус или профессия</div>
-        <div class="tabs">
-            <div class="tab socials-tab active" onclick="showSection('socials')">Соц.сети</div>
-            <div class="tab various-tab" onclick="showSection('various')">Различное</div>
-        </div>
-        <div class="socials active">
-            <a href="#"><img src="image/telegram.png" alt="Telegram"> Telegram</a>
-            <a href="#"><img src="instagram-icon.png" alt="Instagram"> Instagram</a>
-            <a href="#"><img src="twitch-icon.png" alt="Twitch"> Twitch</a>
-            <a href="#"><img src="tiktok-icon.png" alt="TikTok"> TikTok</a>
-            <a href="#"><img src="youtube-icon.png" alt="YouTube"> YouTube</a>
-        </div>
-        <div class="various">
-            <a href="#"><img src="merch-icon.png" alt="Мерч"> Мерч канала</a>
-            <a href="#"><img src="ads-icon.png" alt="Реклама"> Рекламное предложение</a>
-            <a href="#"><img src="telegram-icon.png" alt="Архив"> Telegram - (Архив Стримов)</a>
-            <a href="#"><img src="instagram-icon.png" alt="Второй Instagram"> Instagram - (Второй аккаунт)</a>
-            <a href="#"><img src="bot-icon.png" alt="Бот"> Telegram - (Бот для предложений)</a>
-        </div>
-    </div>
+
 </body>
 </html>
-
